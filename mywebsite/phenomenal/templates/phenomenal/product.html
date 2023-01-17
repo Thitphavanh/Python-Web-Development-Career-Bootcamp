@@ -1,0 +1,18 @@
+{% extends 'phenomenal/base.html' %} 
+
+<title>{% block title %} Phenomenal Product {% endblock title %}</title>
+
+{% block content%}
+<br><br>
+<h1>Phenomenal all products</h1>
+<hr>
+
+{% for p in all_products %}
+<h3>ສິນຄ້າ: {{p.name}}</h3>
+<p>ລາຄາ: {{p.price}} LAK</p>
+<p>-------------------------------</p>
+
+{% endfor %} 
+
+
+{% endblock content%}

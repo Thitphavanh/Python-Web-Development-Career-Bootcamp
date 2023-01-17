@@ -1,9 +1,13 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>About</title>
-  </head>
-  <body>
-    <h1>About Phenomenal</h1>
-  </body>
-</html>
+{% extends 'phenomenal/base.html' %} 
+
+<title>{% block title %} Phenomenal About {% endblock title %}</title>
+
+{% block content%}
+<br><br>
+<h1>About Phenomenal</h1>
+<hr>
+
+<p>This is about our website</p>
+
+{% endblock content%}
+

@@ -3,13 +3,21 @@ from django.http import HttpResponse
 from .models import *
 
 
-def home_page(request):
+def homepage(request):
     # variable = Table.objects.method()
     # Query all posts
     all_posts = Post.objects.all()
-
-    return render(request, "phenomenal/home.html", {"all_posts": all_posts})
+    context = {"all_posts": all_posts}
+    return render(request, "phenomenal/home.html", context)
 
 
 def about(request):
-    return render(request, "phenomenal/about.html")
+    all_products = Product.objects.all()
+    context = {"all_products": all_products}
+    return render(request, "phenomenal/about.html", context)
+
+
+def product(request):
+    all_products = Product.objects.all()
+    context = {"all_products": all_products}
+    return render(request, "phenomenal/product.html", context)
