@@ -1,4 +1,4 @@
-{% extends 'phenomenal/base.html' %} 
+{% extends 'phenomenal/base.html' %}
 
 <title>{% block title %} Phenomenal Home {% endblock title %}</title>
 
@@ -13,16 +13,15 @@
     <div class="col-sm-4">
       <div class="card">
         <div class="card-body">
+          <img src="{{ post.featured_pic.url }}" alt="{{ post.title }}" class="card-img-top" height="180"/>
           <h5 class="card-title">{{ post.title }}</h5>
           <p class="card-text">{{ post.description }}</p>
-          <a href="#" class="btn btn-primary">Read more</a>
+          <a href="blog/{{ post.id }}" class="btn btn-dark">Read more</a>
         </div>
       </div>
+      <br />
     </div>
     {% endfor %}
   </div>
 </div>
 {% endblock content%}
-
-
-
