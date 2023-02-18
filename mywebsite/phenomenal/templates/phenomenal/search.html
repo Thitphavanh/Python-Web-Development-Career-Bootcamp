@@ -1,0 +1,13 @@
+{% extends 'phenomenal/base.html' %} {% block content%}
+
+<div class="container">
+  <br />
+  <div class="col-sm-8">
+    <h1>Phenomenal Search</h1>
+    <p>Search you want to know</p>
+    {% for post in posts %}
+    <li><a href="/blog/{{ post.id }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </div>
+</div>
+{% endblock content%}

@@ -10,3 +10,5 @@ class PostAdmin(SummernoteModelAdmin):
 
 admin.site.register(Post, PostAdmin)
 admin.site.register(Product)
+admin.site.register(Contact)
+admin.site.register(Book)
