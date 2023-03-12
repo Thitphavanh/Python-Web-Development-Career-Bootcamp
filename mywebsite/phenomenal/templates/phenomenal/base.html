@@ -8,7 +8,7 @@
       integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
       crossorigin="anonymous"
     />
-    <title>{% block title %} Phenomenal Store {% endblock title %}</title>
+    {% block meta %} {% endblock %}
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -54,7 +54,12 @@
               Account
             </a>
             <div class="dropdown-menu">
-              <a class="dropdown-item" href="/sign-out" onclick="return confirm('Do you want to sign out?');" >Sign out</a>
+              <a
+                class="dropdown-item"
+                href="/sign-out"
+                onclick="return confirm('Do you want to sign out?');"
+                >Sign out</a
+              >
               <a class="dropdown-item" href="/sign-in">Sign in</a>
               <a class="dropdown-item" href="#">Sign up</a>
             </div>

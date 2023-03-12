@@ -1,11 +1,28 @@
-{% extends 'phenomenal/base.html' %} {% block content%}
+{% extends 'phenomenal/base.html' %}
+{% block meta %}
+<title>{{ single_post.title }}</title>
+<meta name="description" content="{{ single_post.description }}">
+<meta property="og:url"                content="http://www.nytimes.com/2015/02/19/arts/international/when-great-minds-dont-think-alike.html" />
+<meta property="og:type"               content="article" />
+<meta property="og:title"              content="{{ single_post.title }}" />
+<meta property="og:description"        content="{{ single_post.description }}" />
+<meta property="og:image"              content="http://localhost:8000/{{ single_post.featured_pic.url }}" />
+{% endblock %}
+{% block content%}
 
 <div class="container">
   <br />
   <div class="col-sm-8">
     <h1>{{ single_post.title }}</h1>
-    <p>Created: {{ single_post.date_created | date }}, Last update: {{ single_post.dated | date }}</p>
-    <img src="{{ single_post.featured_pic.url }}" alt="{{ single_post.title }}" class="img-fluid"/>
+    <p>
+      Created: {{ single_post.date_created | date }}, Last update:
+      {{single_post.dated | date }}
+    </p>
+    <img
+      src="{{ single_post.featured_pic.url }}"
+      alt="{{ single_post.title }}"
+      class="img-fluid"
+    />
     <p>{{ single_post.body | safe }}</p>
   </div>
 </div>
