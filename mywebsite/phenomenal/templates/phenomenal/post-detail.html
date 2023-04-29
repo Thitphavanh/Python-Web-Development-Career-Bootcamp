@@ -15,8 +15,7 @@
   <div class="col-sm-8">
     <h1>{{ single_post.title }}</h1>
     <p>
-      Created: {{ single_post.date_created | date }}, Last update:
-      {{single_post.dated | date }}
+      Created: {{ single_post.date_created | date }}, Last update: {{single_post.dated | date }}
     </p>
     <img
       src="{{ single_post.featured_pic.url }}"
